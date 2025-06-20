@@ -1,0 +1,70 @@
+package javasession;
+
+public class ConditionsClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//Conditions
+//Mathematical Operators ==, !=, <, <=,>,>=
+// logical operators :And(&&), Or(||), Not(!)
+//String Operators:equals, equalsIgnorecase(), contains(),starts-with, ends-with,
+		
+		
+//if()
+	
+int a=10;
+int b=20;
+int c=5;
+String s="Selenium";
+if(a==10  && b==20  || c==5 && s.contains("Sel"))
+{
+	System.out.println("Value Matched");
+	
+}
+		
+	//If else  if-else
+
+int k=50;
+if(k==100)
+{
+	System.out.println("k is 100");
+}
+	
+else if(k ==50)
+{
+	System.out.println("k is 50");
+}
+		
+else if(k ==20)
+{
+	System.out.println("k is 20");
+}
+
+else 
+{
+	System.out.println("Not matched");
+}
+
+		
+
+
+//Switch case--optimized condition check
+
+
+int a1=110;
+switch(a1)
+{
+case 97: System.out.println(Character.toChars(a1));
+break;
+case 101: System.out.println(Character.toChars(a1));
+break;
+case 119: System.out.println(Character.toChars(a1));
+break;
+default: System.out.println("No match");
+break;
+
+}
+		
+	}
+
+}
