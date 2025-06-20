@@ -1,0 +1,68 @@
+
+package javasession;
+
+public class LoopsClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//initialization, condition, increment/decrement
+		
+		//for
+		
+		
+		for(int i=0;i<10; i ++)
+		{
+			
+			System.out.println(i);
+			System.out.println("+ in the loop");
+		}
+		
+		System.out.println("End of loop");
+		
+		
+		
+		for (int i=9;i>0; i--)
+		{
+			System.out.println(i);
+			System.out.println("+ in the loop");	
+		}
+		
+		System.out.println("End of loop");
+	//while
+		
+		
+		int ii= 0;
+		while(ii<10)
+		{
+			System.out.println(++ii);
+			ii++;
+		}
+		
+		
+		
+		//do-while
+		int k=0;
+		do {	
+			System.out.println("K" + k);
+			   k ++;
+		}while(k<10);
+		
+		
+		
+		//enhanced for loop  --> Arrays, ArrayList
+	
+	      int[] arr = {1,4,2,5,3,7,10,9,128};
+	      
+	      
+	      System.out.println(arr[5]);
+	      
+	      for(int m:arr)
+	      {System.out.println(m);
+	}
+		
+		}
+		
+	
+}
+	
