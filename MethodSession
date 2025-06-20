@@ -1,0 +1,58 @@
+package javasession;
+
+public class MethodSession {
+   //properties
+		int a;
+		int b;
+		
+//behaviours --> Methods -> non return Type/ return Type
+		
+		void methodOne()
+		{
+			System.out.print("methodOne");
+		}
+		
+		void methodOneParam(int a)
+		{
+			System.out.print("methodOne ->" + a);
+		}
+		
+		
+		void TwoParam(int a, String b)
+		{
+			System.out.print("methodTwo Param ->" + a +":"+  b);
+		}
+		
+		 int methodTwo() {
+			
+			return a;
+		}
+		
+		int methodOneParamRet(int a)
+		{ return a;
+		}
+		
+		int methodTwoParamRet(int a, String b)
+		{
+			 
+			System.out.println(b);
+			return a;
+		}
+		
+		int methodThreeParamRet(int a, int b, int c)
+		{
+			return a+b+c;
+		}
+		
+		public static void main(String[] args)
+		{
+			MethodSession obj = new MethodSession();
+			obj.methodOneParam(10);
+		}
+		
+	
+		
+		
+	}
+		
+	
