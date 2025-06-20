@@ -1,0 +1,138 @@
+package javasession;
+
+public class StringOperations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+String s = "  Selenium Course  ";
+		
+		int a = s.trim().length();
+		System.out.println(a);
+		
+		
+		//concatenation --> + , concat()
+		
+				String s1 = "Java"+" "+s.trim();
+				System.out.println(s1);
+				
+				
+				
+				String s2 = "Java".concat(" ").concat(s.trim());
+				System.out.println(s2);
+				
+				String s3 = 100+200+" Add "+(50+50);
+				System.out.println(s3);
+				
+				
+				
+				
+				//split & //substring
+				String read="This is Java class started on 6th Jan 2024 "
+						+ "at westmore Dr and fee is $500";
+				String[] data = read.split(" ");
+				int count=0;
+				for(String se:data)
+				{
+					System.out.println("["+count+"]->"+se);
+					count++;
+				}
+				
+				
+				String temp;
+				if(data[6].trim().length()>3) {
+					temp = data[6].trim().substring(0, 2);
+				}else
+				{
+					temp= data[6].trim().substring(0, 1);
+				}
+				
+				System.out.println(data[6]);
+				System.out.println(temp);
+				
+				
+				
+				
+				String sub=data[2].trim();
+				String date=temp+"-"+data[7].trim()+"-"+data[8].trim();
+				String loc=data[10].substring(0, 1).trim().toUpperCase()
+						+data[10].substring(1).trim()+" "+data[11].trim().toUpperCase();
+				String fee=data[15].substring(1);
+				System.out.println(fee);
+				double tFee = 0.13 * Double.parseDouble(fee)+Double.parseDouble(fee);
+				String t="$"+String.valueOf(tFee);
+				System.out.println(sub);
+				System.out.println(date);
+				System.out.println(loc);
+				System.out.println(t);
+				
+				
+				//compare
+				String act = "Seleniumb";
+				String exp = "Seleniumca";
+				
+				int aa=act.compareTo(exp);
+				System.out.println(aa);
+				
+				//boolean type--: contains, starts-with ends-with
+				boolean bb = act.contains("um");
+				System.out.println(bb);
+				
+				boolean cc = act.startsWith("Sel");
+				System.out.println(cc);
+				
+				boolean dd = act.endsWith("umb");
+				System.out.println(dd);
+				
+				// string -> char array and vice versa
+				String ss= "DAD";
+				char[] arr = ss.toCharArray();
+				char[] tmp = new char[arr.length];
+				int count1=0;
+				for(int i=arr.length-1;i>=0;i--)
+				{
+					System.out.println(arr[i]);
+					tmp[count1]=arr[i];
+					count1++;
+				}
+				
+				String st = String.valueOf(tmp);
+				System.out.println(st);
+				if(st.equals(ss))
+				{
+					System.out.println("Matched");
+				}
+				else {
+					System.out.println("Not Matched");
+				}
+				
+				
+				//string--> char array and vice versa
+				
+				/*String sb="Template";
+				char[] arr1= sb.toCharArray();
+				char[] temp2 = new char[arr.length];
+				int count2 = 0;
+				for(int i=arr1.length-1;i>=0;i--)
+					
+				{
+					System.out.println(arr[i]);
+					temp2[count2]=arr[i];
+					count1 ++;
+					
+				}
+				
+				String su= String.valueOf(temp2);
+				System.out.println(su);
+				if(sb.equals(su)) {
+					System.out.println("Matched");
+					
+				
+				}*/
+							
+				
+				
+	}
+
+}
