@@ -1,0 +1,100 @@
+
+package javasession;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
+public class CollectionSetAndMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//Collection of unique data of same type
+		Set<Integer> set = new HashSet <Integer>();  //unsorted
+		
+		  set.add(10);
+		  set.add(20);
+		  set.add(30);
+		  set.add(50);
+		  set.add(10);
+		  set.add(20);
+		  
+		  System.out.println(set);
+		 
+	
+		Set<Integer> set1= new TreeSet <Integer>();    //sorted
+		
+		  set1.add(10);
+		  set1.add(20);
+		  set1.add(30);
+		  set1.add(50);
+		  set1.add(10);
+		  set1.add(20);
+		  
+		  System.out.println(set1);
+		  
+		  
+		  List<Integer> ilist = new ArrayList<Integer>();
+			ilist.add(10);
+			ilist.add(30);
+			ilist.add(100);
+			System.out.println(ilist);
+			ilist.add(0, 100);
+			ilist.add(2, 100);
+			ilist.add(ilist.size(),30);
+			ilist.add(6,800);
+			System.out.println(ilist);
+			ilist.set(0, 666);
+			System.out.println(ilist);
+			System.out.println(ilist);
+			
+			Set<Integer> set2 = new TreeSet<Integer>(ilist);
+			System.out.println(set2);
+			//System.out.println(ilist.get(2));
+			List<Integer> ilist2 = new ArrayList<Integer>(set2);
+			System.out.println("ilist2-->"+ilist2);
+			System.out.println(ilist2.get(4));
+			
+			
+		//// Map --> collection of data in key and value pair
+			Map<String, Integer> map = new HashMap<String, Integer>();
+			map.put("One", 100);
+			map.put("Two", 200);
+			map.put("Three", 300);
+			map.put("Four", 400);
+			map.put("One", 500);
+			map.put("Two", 800);
+			System.out.println(map);
+			System.out.println(map.keySet());
+			System.out.println(map.values());
+			System.out.println(map.get("Four"));
+			
+			for(String s:map.keySet())
+			{
+				System.out.println(map.get(s));
+			}
+			
+			//In Map key should be unique, value can be anything
+			Map<String, Integer> map1 = new TreeMap<String, Integer>();
+			map1.put("One", 100);
+			map1.put("Two", 200);
+			map1.put("Three", 300);
+			map1.put("Four", 400);
+			map1.put("One", 500);
+			map1.put("Two", 800);
+			System.out.println(map1);
+			System.out.println(map1.keySet());
+			System.out.println(map1.values());
+			
+			
+		 
+		
+		
+	}
+
+}
