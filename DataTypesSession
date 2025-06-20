@@ -1,0 +1,41 @@
+package javasession;
+
+public class DataTypesSession {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		//Data Types 8
+				// Whole numbers
+		            byte a =127;   //1byte
+		            double d = 10.9;     //64 bit
+		            
+		            
+		            
+		            
+		            
+		            //Data Type -> Reference\Object
+		            
+		            int total = (int) (d);
+		            System.out.println(total);
+		            
+		            double total1= a+d;
+		            System.out.println(total1);
+		            
+		        
+		       String s = "400";
+		       int total2 = a + Integer.parseInt(s);
+		       System.out.println(total2);
+		       
+		            
+		       String s1 = "400.09";
+		       float total3 = a + Float.parseFloat(s1);
+		       System.out.println(total3); 
+		            
+		            
+		            
+			}
+	}
+
+
