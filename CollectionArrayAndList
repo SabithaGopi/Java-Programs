@@ -1,0 +1,107 @@
+package javasession;
+
+import java.util.ArrayList;
+
+public class CollectionArrayAndList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Object p = 10;
+		Object s = "String";
+		//Object j= 10.9;
+		Object arr[] = {10,20, 20.9, 30.8, "One", "Two", 'z','f',true, false };
+		
+		int tot = Integer.parseInt(p.toString())+100;
+		System.out.println(tot);
+		
+		
+		
+		     int c=0;
+		     double cd=0;
+		  for(Object o:arr)
+		  {
+			  if(o instanceof Integer)
+			  {
+				  c=c+Integer.parseInt(o.toString());
+				  System.out.println(c);
+			  }
+			
+			  if(o instanceof Double)
+			  {
+				  cd=cd+Double.parseDouble(o.toString());
+				  System.out.println(cd);
+			  }
+			  
+			    
+				
+			  
+			  if(o instanceof String)
+			  {
+				  System.out.println(o);
+			  }
+			  
+			  if(o instanceof Boolean)
+			  {
+				  System.out.println(o+s.toString());
+			  }
+			  
+			  
+		  }
+		
+			
+		  //break;
+		  
+		  for(int l=0;l<100; l++)
+		  {
+			  System.out.println(l);
+			  if(l==40)
+				  break;
+		  }
+			
+		  
+		  //Continue
+		  for(int l=0;l<100; l++)
+		  {
+			  System.out.println(l);
+			  if(l>=40)
+				  continue;
+			  System.out.println("Aftercontinue");
+		  }
+		  
+			
+			//specific data type array
+			//static array
+			//2 ways to initialize
+			
+			//when data is known
+			int []arr1= {10,20,30,50};
+			System.out.println("Length" + arr1.length);
+			
+			//when size known but no data.
+			int[]arr2= new int[6];
+			arr2[3]=1000;
+			for(int i:arr2)
+			{
+				System.out.println(i);
+						
+}
+			
+			
+			//Array List-> Dynamic List
+			
+			
+			ArrayList<Number> oList = new ArrayList<Number>();
+			oList.add(10);
+			oList.add(20);
+			oList.add(40.9);
+			System.out.println(oList);
+			
+			
+			
+			
+	    }	
+		
+		
+	}
+
