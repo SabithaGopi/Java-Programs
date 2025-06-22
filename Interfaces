@@ -1,0 +1,194 @@
+Bike.java
+Car.java
+ComplianceVehicle.java
+EVSUV.Java
+Truck.java
+Vehicle.java
+VehicleImplTow.java
+
+package Interfaces;
+
+public interface Bike {
+int a=9;
+	
+	public String getRegistrationBike();
+	public void setRegistrationBike(String s);
+	public double calculateMilage();
+}
+
+
+package Interfaces;
+
+public interface Car extends EVSuv {
+	public String getRegistrationCar();
+	public void setRegistrationCar(String s);
+	public double calculateEVCharge();
+
+}
+
+package Interfaces;
+
+public abstract class ComplianceVehicle {
+
+	public abstract void newRules();
+	public abstract void changeRules();
+
+	
+}
+
+package Interfaces;
+
+public interface EVSuv {
+
+	
+	public void EVDetails();
+}
+
+
+package Interfaces;
+
+public interface Truck {
+
+	public String getRegistrationTruck();
+	public void setRegistrationTruck(String s);
+	public double calculateRoadTax();
+
+
+}
+
+package Interfaces;
+
+public abstract class Vehicle extends ComplianceVehicle {
+	
+int a;
+	
+	public abstract String getRegistration();
+	public abstract void setRegistration(String s);
+	public abstract String getTransmissionType();
+	public abstract void setTransmissionType(String s);
+	public abstract String getMake();
+	public abstract void setMake(String s);
+	
+	public void recallsCount(int a)
+	{
+		System.out.println("Recalls:"+a);
+	}
+
+	/*public static void main(String[] arg)
+	{
+		Vehicle v = new VehicleImpl();
+		v.recallsCount(0);
+		
+	}*/
+
+}
+
+package Interfaces;
+
+import abstractions.Vehicle;
+
+public class VehicleImplTwo extends Vehicle implements Bike, Truck, Car{
+
+	@Override
+	public void EVDetails() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getRegistrationCar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setRegistrationCar(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public double calculateEVCharge() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getRegistrationTruck() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setRegistrationTruck(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public double calculateRoadTax() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getRegistrationBike() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setRegistrationBike(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public double calculateMilage() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getRegistration() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setRegistration(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getTransmissionType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setTransmissionType(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getMake() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setMake(String s) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+
+}
+
+	
+
+
