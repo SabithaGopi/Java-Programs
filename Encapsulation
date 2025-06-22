@@ -1,0 +1,170 @@
+ClassOne.java
+ClassOneStatic.java
+DummyClass.java
+
+package encapsulation;
+
+public class ClassOne {
+	
+		//properties: variable: instance
+		int a;
+		int b;
+		static int c=100;
+		
+	
+		private int a1;
+		private int b1;
+		
+		//behaviors -> Methods
+		
+		public int getA1() {
+			return a1;
+		}
+
+		public void setA1(int a1) {
+			this.a1 = a1;
+		}
+
+		public int getB1() {
+			return b1;
+		}
+
+		public void setB1(int b1) {
+			this.b1 = b1;
+		}
+
+		
+		public ClassOne()
+		{
+			System.out.println("Constructor");
+			this.a=1;
+			this.b=1;
+			this.a1=1;
+			this.b1=1;
+		}
+		
+		public ClassOne(int a, int b)
+		{
+			System.out.println("Constructor 2 params");
+			this.a=a;
+			this.b=b;
+			this.a1=a;
+			this.b1=b;
+		}
+		
+		public void sum()
+		{
+			System.out.println(a+b+c);
+		}
+		
+		public void sumOfAandB()
+		{
+			//local variable
+		    int a=101;
+			int b=120;
+			System.out.println(a+b);
+			if(a==101)
+			{
+				int aaa = 0;
+				System.out.println(aaa+b);
+			}
+		}
+		
+		public void div()
+		{
+			int i = a/b;
+			System.out.println(i);
+		}
+		
+		public void divPrivateVarAandB()
+		{
+			double i = a1/b1;
+			System.out.println(i);
+		}
+		public static void main(String[] arg)
+		{
+			ClassOne o = new ClassOne();
+			o.a=10;
+			o.b=10;
+			o.sum();
+			ClassOne o1 = new ClassOne();
+			o1.div();
+			ClassOne o2 = new ClassOne(20,5);
+			o2.b=4;
+			o2.div();
+		}
+		
+	
+
+}
+
+
+package encapsulation;
+
+public class ClassOneStatic {
+
+	
+	//properties: variable: static/Class
+		static int a;
+		static int b;
+		
+		//behaviors -> Methods
+		static void sum()
+		{
+			System.out.println(a+b);
+		}
+		
+		static void sumOfAandB()
+		{
+			//local variable
+		    int a=101;
+			int b=120;
+			System.out.println(a+b);
+			if(a==101)
+			{
+				int aaa = 0;
+				System.out.println(aaa+b);
+			}
+		}
+		
+		public static void main(String[] arg)
+		{
+			ClassOneStatic.a=10;
+			ClassOneStatic.b=20;
+			ClassOneStatic.sum();
+		}
+}
+
+
+package encapsulation;
+
+public class DummyClass {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ClassOne obj = new ClassOne();
+		ClassOne obj1 = new ClassOne();
+		ClassOne obj2 = new ClassOne();
+		obj.a=10;
+		obj.b=20;
+		obj.sum();
+		ClassOne.c=20;
+		obj1.sum();
+		obj2.sum();
+		
+		ClassOneStatic.a=100;
+		ClassOneStatic.b=200;
+		ClassOneStatic.sum();
+		
+		ClassOne obj3 = new ClassOne();
+		//obj3.setA1(500);
+		obj3.setA1(500);
+		obj3.setB1(200);
+		obj3.divPrivateVarAandB();
+	}
+	
+	
+
+}
+
+
