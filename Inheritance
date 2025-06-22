@@ -1,0 +1,211 @@
+AddSub.java
+
+package Inheritance;
+
+public class AddSub {
+
+
+		private int a;
+		private int b;
+		//final int z=100;
+		public AddSub(int a, int b)
+		{
+			this.a=a;
+			this.b=b;
+		}
+		public int getA() {
+			return a;
+		}
+
+		public void setA(int a) {
+			this.a = a;
+		}
+
+		public int getB() {
+			return b;
+		}
+
+		public void setB(int b) {
+			this.b = b;
+		}
+
+		public int sum()
+		{
+			return a+b;
+		}
+		
+		public int sum(int a, int b)
+		{
+			System.out.println("Parent Sum Method");
+			return a+b;
+		}
+		
+		public int sub()
+		{
+			return a-b;
+		}
+		
+		public int sub(int a, int b)
+		{
+			return a-b;
+		}
+		
+
+}
+
+
+package Inheritance;
+
+public class DummyInt{
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		new MulDiv(1,2);
+		
+		PerAvg pa = new PerAvg(2,3);
+		int s = pa.sub(10, 20);
+		System.out.println(s);
+		
+		pa.setA(400);
+		pa.setB(600);
+		int s11 = pa.sum();
+		System.out.println("Sum:->"+s11);
+		
+		int s1 = pa.sum(10, 20);
+		System.out.println(s1);
+		
+		int s2 = pa.mul(10, 20);
+		System.out.println(s2);
+		
+		pa.setAp(200);
+		pa.setB(300);
+		
+		double s3 = pa.perA();
+		System.out.println(s3);
+		
+		
+		new PerAvg(34,56);
+		
+
+		new PerAvg(3,5);
+		AddSub o2 = new MulDiv(4,3);
+		o2.sum(1, 2);
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}
+package Inheritance;
+
+public class MulDiv extends AddSub {
+
+	public MulDiv(int a, int b) {
+		super(a, b);
+		this.am=10;
+	}
+	private int am;
+	private int bm;
+	
+	public int getAm() {
+		return am;
+	}
+
+	public void setAm(int a) {
+		this.am = a;
+	}
+
+	public int getBm() {
+		return bm;
+	}
+
+	public void setBm(int b) {
+		this.bm = b;
+	}
+
+	public int mul()
+	{
+		return am*bm;
+	}
+	
+	public int mul(int a, int b)
+	{
+		return a*b;
+	}
+	
+	public int div()
+	{
+		return am/bm;
+	}
+	
+	public double div(double a, double b)
+	{
+		return a/b;
+	}
+	public int sum(int a, int b)
+	{
+		System.out.println("Child Sum Method");
+		return a+b+(a+b)/2;
+	
+	
+}
+}
+package Inheritance;
+
+public class PerAvg extends MulDiv{
+
+  public PerAvg(int a, int b){
+			super(a, b);
+			// TODO Auto-generated constructor stub
+		}
+		private int ap;
+		private int bp;
+		
+		public int getAp() {
+			return ap;
+		}
+
+		public void setAp(int a) {
+			this.ap = a;
+		}
+
+		public int getBp() {
+			return bp;
+		}
+
+		public void setBp(int b) {
+			this.bp = b;
+		}
+
+		public double avg()
+		{
+			return (ap+bp)/2;
+		}
+		
+		public double avg(int a, int b, int c)
+		{
+			return (a+b+c)/2;
+		}
+		public double perA()
+		{
+			double d = (ap*100)/(ap+bp);
+			return d;
+		}
+		public double perB()
+		{
+			double d = (bp*100)/(ap+bp);
+			return d;
+		}
+				
+		
+	}
+
+
+
